@@ -1,0 +1,17 @@
+#leoimg{
+    width: 200px;
+    border-radius: 50% 10%;
+    margin: 0% 50% 0% 50%;
+}
+.inlineblock {
+    display: inline-block;
+
+}
+
+header {
+    background-color:rgb(44, 0, 106);
+    color: white;
+    width: 1080px;
+    height: 45px;
+    position: sticky;
+}
