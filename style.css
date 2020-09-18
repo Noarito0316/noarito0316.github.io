@@ -7,7 +7,16 @@
     display: inline-block;
 
 }
-
+a:link {
+    color: white;
+    font-weight: bolder;
+  }
+  a:hover {
+      color:grey;
+  }
+  a:visited {
+      color: grey;
+  }
 header {
     background-color:rgb(44, 0, 106);
     color: white;
