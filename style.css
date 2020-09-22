@@ -8,16 +8,15 @@ body {
 header {
     display: flex;
     height: 100px;
-    width: 100vw;
+    width: 100%;
     background-color: rgb(44, 0, 106);
     color: white;
     align-items: flex-end;
     justify-content: space-between;
-    flex-flow: row wrap;
+    flex-flow: row nowrap;
     position: absolute;
     top: 0;
     left: 0;
-    flex-basis: 20%;
 }
 
 header>#projects {
@@ -25,6 +24,7 @@ header>#projects {
     display: flex;
     flex-flow: center nowrap;
     justify-content: flex-end;
+    flex: 0 0 auto;
 }
 
 header>#projects>* {
@@ -41,6 +41,7 @@ header>#projects>* {
     border-radius: 5px;
     margin: 0 0 5px 34px;
     background-color: black;
+    flex: 0 0 auto;
 }
 
 #inicio {
