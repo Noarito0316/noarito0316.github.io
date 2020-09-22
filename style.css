@@ -1,11 +1,14 @@
 body {
+    display: flex;
+    flex-flow: column wrap;
     background-color: rgb(75, 1, 177);
+    width: max-content;
 }
 
 header {
     display: flex;
-    width: 100%;
     height: 100px;
+    width: 100%;
     background-color: rgb(44, 0, 106);
     color: white;
     align-items: flex-end;
@@ -14,6 +17,7 @@ header {
     position: absolute;
     top: 0;
     left: 0;
+    flex-basis: 20%;
 }
 
 header>#projects {
@@ -52,6 +56,8 @@ header>#projects>* {
 a:link {
     color: white;
     font-weight: bolder;
+    transition: color 0.2s linear;
+    text-decoration: none;
 }
 
 a:hover {
@@ -59,5 +65,5 @@ a:hover {
 }
 
 a:visited {
-    color: grey;
+    color: transparent;
 }
