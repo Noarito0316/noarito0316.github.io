@@ -8,7 +8,7 @@ body {
 header {
     display: flex;
     height: 100px;
-    width: 100%;
+    width: 100vw;
     background-color: rgb(44, 0, 106);
     color: white;
     align-items: flex-end;
