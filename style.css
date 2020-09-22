@@ -1,29 +1,63 @@
 body {
     background-color: rgb(75, 1, 177);
 }
-#leoimg{
+
+header {
+    display: flex;
+    width: 100%;
+    height: 100px;
+    background-color: rgb(44, 0, 106);
+    color: white;
+    align-items: flex-end;
+    justify-content: space-between;
+    flex-flow: row wrap;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+header>#projects {
+    width: 600px;
+    display: flex;
+    flex-flow: center nowrap;
+    justify-content: flex-end;
+}
+
+header>#projects>* {
+    margin: 0 23px 5px 0px;
+    padding: 2px;
+    background-color: black;
+    width: max-content;
+    border-radius: 5px;
+}
+
+#home {
+    display: flex;
+    padding: 2px;
+    border-radius: 5px;
+    margin: 0 0 5px 34px;
+    background-color: black;
+}
+
+#inicio {
+    margin-top: 100px;
+}
+
+#leoimg {
     width: 200px;
     border-radius: 50% 10%;
     margin: 0% 50% 0% 50%;
 }
-.inlineblock {
-    display: inline-block;
 
-}
 a:link {
     color: white;
     font-weight: bolder;
-  }
-  a:hover {
-      color:grey;
-  }
-  a:visited {
-      color: grey;
-  }
-header {
-    background-color:rgb(44, 0, 106);
-    color: white;
-    width: 1080px;
-    height: 45px;
-    position: sticky;
+}
+
+a:hover {
+    color: grey;
+}
+
+a:visited {
+    color: grey;
 }
