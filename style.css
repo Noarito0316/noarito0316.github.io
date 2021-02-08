@@ -1,3 +1,7 @@
+*{
+    padding: 0;
+    margin: 0;
+}
 body {
     display: flex;
     flex-flow: column wrap;
@@ -13,35 +17,18 @@ header {
     color: white;
     align-items: flex-end;
     justify-content: space-between;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
     position: absolute;
-    top: 0;
-    left: 0;
+    flex-basis: 30%;
 }
 
-header>#projects {
-    width: 600px;
-    display: flex;
-    flex-flow: center nowrap;
-    justify-content: flex-end;
-    flex: 0 0 auto;
-}
-
-header>#projects>* {
-    margin: 0 23px 5px 0px;
+header>div {
+    position: flex;
+    margin: 0 20px 10px 20px;
     padding: 2px;
     background-color: black;
     width: max-content;
     border-radius: 5px;
-}
-
-#home {
-    display: flex;
-    padding: 2px;
-    border-radius: 5px;
-    margin: 0 0 5px 34px;
-    background-color: black;
-    flex: 0 0 auto;
 }
 
 #inicio {
@@ -72,4 +59,12 @@ a:hover {
 
 a:visited {
     color: transparent;
+}
+
+@media screen and (max-width: 550px) {
+
+    body {
+    background-color: khaki;
+}
+
 }
