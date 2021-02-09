@@ -5,11 +5,12 @@ import Home from './pages/Home';
 
 function App() {
   return (
-    <Router>
-    <Switch>
-      <Route exact path="/" component={ Home } />
-    </Switch>
-  </Router>
+  //   <Router>
+  //   <Switch>
+  //     <Route exact path="/" component={ Home } />
+  //   </Switch>
+  // </Router>
+  <h2>PIROCA</h2>
   )
 }
 
