@@ -7,9 +7,9 @@ class Home extends React.Component {
 <body>
     <header>
         <div id="home"><a target="" href="https://noarito0316.github.io">Inicio</a></div>
-        <h2>REACT</h2>
     </header>
     <h1 id="inicio">Leonnardo Lair Tavares Gomes</h1>
+        <h2>REACT</h2>
 
     <img src={leo} id="leoimg" alt="Imagem de Perfil"/>
 
