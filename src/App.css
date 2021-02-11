@@ -6,7 +6,60 @@ body {
   display: flex;
   flex-flow: column wrap;
   background-color: rgb(75, 1, 177);
+  align-items: center; 
+}
+
+@keyframes FadeInOpacity {
+  0% {
+    opacity: 0;;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.bodycontainer{
+  animation: 1s ease-out 0s 1 FadeInOpacity;
+  display: flex;
+  flex-direction: column ;
   align-items: center;
+}
+
+nav {
+  padding: 20px;
+  position: fixed;
+  left: 0;
+  z-index: 50;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  height: 100vh;
+  background-color: rgb(58, 9, 126);
+}
+
+.fon {
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  width: 0;
+  opacity: 0;
+  transition: all ease-in 1s;
+    display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fon:target {
+  opacity: 1;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+}
+
+.fon:target h2 {
+  opacity: 0;
+  animation: 2s fadeIn forwards .5s;
 }
 
 header {
@@ -58,7 +111,9 @@ a:hover {
 }
 
 a:visited {
-  color: transparent;
+  font-weight: bolder;
+  transition: color 0.2s linear;
+  color: white;
 }
 
 @media screen and (max-width: 550px) {
