@@ -16,6 +16,9 @@ body {
   display: flex;
   flex-flow: column wrap;
   background-color: rgb(75, 1, 177);
+  min-height: 100vh;
+  height: fit-content;
+  background-image: linear-gradient(rgb(75, 1, 177),rgb(162, 115, 228));
   align-items: center; 
 }
 
@@ -83,7 +86,8 @@ nav {
   display: flex;
   justify-content: space-around;
   flex-direction: column;
-  height: 100vh;
+  min-height: 100vh;
+  height: fit-content;
   width: fit-content;
   background-color: rgb(58, 9, 126);
 }
@@ -97,6 +101,10 @@ nav {
 
 #leoimg:hover {
   border: 3px solid rgb(44, 0, 106);
+}
+
+.video {
+  max-width: 80%;
 }
 
 @media screen and (max-width: 550px) {
