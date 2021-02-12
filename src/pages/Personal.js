@@ -4,7 +4,7 @@ class Personal extends React.Component {
   render() {
     return (
       <section className="bodycontainer">
-            <h2 id="like">Coisas que gosto</h2>
+            <h2 id="like">Personal Interest</h2>
 
     <a target="" href="https://www.youtube.com/watch?v=nZVpt2zPdNo">
       Link para uma musica que gosto bastante

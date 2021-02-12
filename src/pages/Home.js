@@ -7,15 +7,7 @@ class Home extends React.Component {
     return (
 <body>
     <section className="bodycontainer">
-    <header>
-    </header>
     <h1 id="inicio">Leonnardo Lair Tavares Gomes</h1>
-        <h2>REACT</h2>
-        <a target="" href="#fon">FON</a>
-        <div id="fon" className="fon">
-    <h2>fon fon</h2>
-    </div>
-
     <img src={leo} id="leoimg" alt="Imagem de Perfil"/>
 
     <p>Cursando o <strong>8° Periodo de Engenharia da computação</strong> e <strong>Estudante da Trybe.</strong> 
@@ -25,11 +17,6 @@ class Home extends React.Component {
 
     <a target="" href="https://github.com/Noarito0316">Perfil do Github </a>
 
-    <ul>
-        <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#like">Coisa que gosto</a></li>
-        <li><a href="#fim">Fim da Pagina</a></li>
-    </ul>
     </section>
 </body>
       );

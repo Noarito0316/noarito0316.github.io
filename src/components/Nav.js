@@ -9,9 +9,24 @@ class Nav extends React.Component {
   render() {
     return (
       <nav>
-      <Link to="/" ><img src={home} alt="Home"/></Link>
-      <Link to="/projects"><img src={projects} alt="Projects"/></Link>
-      <Link to="/personal"><img src={personal} alt="Personal"/></Link>
+      <Link to="/">
+        <div className="navfix">
+          <img src={home} alt="Home"/>
+          <p className="infoPopUp">Home</p>
+          </div>
+        </Link>
+      <Link to="/projects">
+        <div className="navfix">
+          <img src={projects} alt="Projects"/>
+          <p className="infoPopUp">Projects</p>
+          </div>
+        </Link>
+      <Link to="/personal">
+        <div className="navfix">
+          <img src={personal} alt="Personal"/>
+          <p className="infoPopUp">Personal</p>
+          </div>
+        </Link>
     </nav>
     )
   }

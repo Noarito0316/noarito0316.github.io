@@ -2,6 +2,16 @@
   padding: 0;
   margin: 0;
 }
+
+a {
+  color: white;
+}
+
+a:hover {
+  color: gray;
+  transition: color 0.2s linear;
+}
+
 body {
   display: flex;
   flex-flow: column wrap;
@@ -17,12 +27,53 @@ body {
     opacity: 1;
   }
 }
-.bodycontainer{
-  animation: 1s ease-out 0s 1 FadeInOpacity;
+
+nav a:hover {
+  color: white;
+}
+
+.infoPopUp {
+  background-color: rgb(58, 9, 126);
   display: flex;
-  flex-direction: column ;
+  opacity: 0;
+  position:absolute;
+  transform: translateX(0);
+  transition: transform 1s;
+}
+
+
+div:hover > .infoPopUp{
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  opacity: 1;
+  transform: translateX(40px);
+  width: 150px;
+  z-index: -2;
+}
+
+
+.navfix {
+  display: flex;
+  flex-flow: row wrap;
   align-items: center;
 }
+
+.bodycontainer{
+  animation: 1.5s linear 0s 1 FadeInOpacity;
+  align-items: center;
+  display: flex;
+  width: fit-content;
+  flex-direction: column ;
+  margin-left:80px;
+  max-width: 80%;
+  text-align: center;
+}
+
+.bodycontainer p{
+  width: 80%;
+  }
 
 nav {
   padding: 20px;
@@ -33,64 +84,13 @@ nav {
   justify-content: space-around;
   flex-direction: column;
   height: 100vh;
+  width: fit-content;
   background-color: rgb(58, 9, 126);
-}
-
-.fon {
-  position: absolute;
-  top: 0;
-  height: 100vh;
-  width: 0;
-  opacity: 0;
-  transition: all ease-in 1s;
-    display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.fon:target {
-  opacity: 1;
-  position: absolute;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 10;
-}
-
-.fon:target h2 {
-  opacity: 0;
-  animation: 2s fadeIn forwards .5s;
-}
-
-header {
-  display: flex;
-  height: 100px;
-  width: 100%;
-  background-color: rgb(44, 0, 106);
-  color: white;
-  align-items: flex-end;
-  justify-content: space-between;
-  flex-flow: row wrap;
-  position: absolute;
-  flex-basis: 30%;
-}
-
-header>div {
-  position: flex;
-  margin: 0 20px 10px 20px;
-  padding: 2px;
-  background-color: black;
-  width: max-content;
-  border-radius: 5px;
-}
-
-#inicio {
-  margin-top: 100px;
 }
 
 #leoimg {
   width: 200px;
-  border: 3px solid;
+  border: 3px solid white;
   border-radius: 50% 10%;
   transition: border 0.2s linear;
 }
@@ -99,27 +99,14 @@ header>div {
   border: 3px solid rgb(44, 0, 106);
 }
 
-a:link {
-  color: white;
-  font-weight: bolder;
-  transition: color 0.2s linear;
-  text-decoration: none;
-}
-
-a:hover {
-  color: grey;
-}
-
-a:visited {
-  font-weight: bolder;
-  transition: color 0.2s linear;
-  color: white;
-}
-
 @media screen and (max-width: 550px) {
-
   body {
-  background-color: khaki;
+  background-color: rgb(103, 10, 126);
+}
+
+#leoimg {
+  width: 80%;
+  max-width: 200px;
 }
 
 }
