@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/noarito0316.github.io/static/css/main.df8535a1.chunk.css",
+    "main.css": "/noarito0316.github.io/static/css/main.1edef4b8.chunk.css",
     "main.js": "/noarito0316.github.io/static/js/main.40f9e68a.chunk.js",
     "main.js.map": "/noarito0316.github.io/static/js/main.40f9e68a.chunk.js.map",
     "runtime-main.js": "/noarito0316.github.io/static/js/runtime-main.dd270d92.js",
@@ -10,14 +10,14 @@
     "static/js/3.e816977f.chunk.js": "/noarito0316.github.io/static/js/3.e816977f.chunk.js",
     "static/js/3.e816977f.chunk.js.map": "/noarito0316.github.io/static/js/3.e816977f.chunk.js.map",
     "index.html": "/noarito0316.github.io/index.html",
-    "static/css/main.df8535a1.chunk.css.map": "/noarito0316.github.io/static/css/main.df8535a1.chunk.css.map",
+    "static/css/main.1edef4b8.chunk.css.map": "/noarito0316.github.io/static/css/main.1edef4b8.chunk.css.map",
     "static/js/2.811fb158.chunk.js.LICENSE.txt": "/noarito0316.github.io/static/js/2.811fb158.chunk.js.LICENSE.txt",
     "static/media/leonnardoLair.f779675b.jpeg": "/noarito0316.github.io/static/media/leonnardoLair.f779675b.jpeg"
   },
   "entrypoints": [
     "static/js/runtime-main.dd270d92.js",
     "static/js/2.811fb158.chunk.js",
-    "static/css/main.df8535a1.chunk.css",
+    "static/css/main.1edef4b8.chunk.css",
     "static/js/main.40f9e68a.chunk.js"
   ]
 }
