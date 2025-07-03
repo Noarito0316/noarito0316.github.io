@@ -5,7 +5,6 @@ import leo from '../img/leonnardoLair.jpeg';
 class Home extends React.Component {
   render() {
     return (
-<body>
     <section className="bodycontainer">
     <h1 id="inicio">Leonnardo Lair Tavares Gomes</h1>
     <img src={leo} id="leoimg" alt="Imagem de Perfil"/>
@@ -18,7 +17,6 @@ class Home extends React.Component {
     <a target="" href="https://github.com/Noarito0316">Perfil do Github </a>
 
     </section>
-</body>
       );
   }
 }

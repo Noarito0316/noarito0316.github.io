@@ -1,35 +1,28 @@
 import React from 'react';
-import { Link} from 'react-router-dom'; 
+import { Link } from 'react-router-dom';
 import home from '../img/Home.png';
 import projects from '../img/Projects.png';
 import personal from '../img/Personal.png';
 
+const links = [
+  { to: '/', label: 'Home', img: home },
+  { to: '/projects', label: 'Projects', img: projects },
+  { to: '/personal', label: 'Personal', img: personal },
+];
 
-class Nav extends React.Component {
-  render() {
-    return (
-      <nav>
-      <Link to="/">
-        <div className="navfix">
-          <img src={home} alt="Home"/>
-          <p className="infoPopUp">Home</p>
+function Nav() {
+  return (
+    <nav>
+      {links.map((link, index) => (
+        <Link to={link.to} key={index}>
+          <div className="navfix">
+            <img src={link.img} alt={link.label} />
+            <p className="infoPopUp">{link.label}</p>
           </div>
         </Link>
-      <Link to="/projects">
-        <div className="navfix">
-          <img src={projects} alt="Projects"/>
-          <p className="infoPopUp">Projects</p>
-          </div>
-        </Link>
-      <Link to="/personal">
-        <div className="navfix">
-          <img src={personal} alt="Personal"/>
-          <p className="infoPopUp">Personal</p>
-          </div>
-        </Link>
+      ))}
     </nav>
-    )
-  }
+  );
 }
 
 export default Nav;
