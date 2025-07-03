@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/noarito0316.github.io/static/css/main.981a91e2.css",
-    "main.js": "/noarito0316.github.io/static/js/main.fca02c13.js",
-    "static/js/453.fbf5291a.chunk.js": "/noarito0316.github.io/static/js/453.fbf5291a.chunk.js",
-    "static/media/leonnardoLair.jpeg": "/noarito0316.github.io/static/media/leonnardoLair.f779675b4cee04a92406.jpeg",
-    "index.html": "/noarito0316.github.io/index.html",
-    "main.981a91e2.css.map": "/noarito0316.github.io/static/css/main.981a91e2.css.map",
-    "main.fca02c13.js.map": "/noarito0316.github.io/static/js/main.fca02c13.js.map",
-    "453.fbf5291a.chunk.js.map": "/noarito0316.github.io/static/js/453.fbf5291a.chunk.js.map"
+    "main.css": "/static/css/main.981a91e2.css",
+    "main.js": "/static/js/main.d2eb0828.js",
+    "static/js/453.fbf5291a.chunk.js": "/static/js/453.fbf5291a.chunk.js",
+    "static/media/leonnardoLair.jpeg": "/static/media/leonnardoLair.f779675b4cee04a92406.jpeg",
+    "index.html": "/index.html",
+    "main.981a91e2.css.map": "/static/css/main.981a91e2.css.map",
+    "main.d2eb0828.js.map": "/static/js/main.d2eb0828.js.map",
+    "453.fbf5291a.chunk.js.map": "/static/js/453.fbf5291a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.981a91e2.css",
-    "static/js/main.fca02c13.js"
+    "static/js/main.d2eb0828.js"
   ]
 }
