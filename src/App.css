@@ -24,6 +24,97 @@ body {
   align-items: center; 
 }
 
+@media (max-width: 900px) {
+  .login-button {
+    position: relative;
+    top: 0;
+    left: 0;
+    margin: 25px auto;
+    display: block;
+  }
+
+  .UserInfo {
+    position: relative;
+    top: 0;
+    right: 0;
+    margin: 25px auto;
+    display: flex;
+    justify-content: center;
+  }
+
+  .bodycontainer {
+    position: relative;
+    top: 0;
+    right: 0;
+    margin: 100px auto;
+  }
+}
+
+
+.LoginButton {
+  position: fixed;
+  top: 10px;
+  left: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* opcional para centralizar horizontalmente se usar largura maior */
+  display: flex;
+  width: 200px;
+  border: 3px solid white;
+  border-radius: 50% 10% 50% 10%;
+  transition: border 0.2s linear;
+}
+
+*.LoginButton {
+  color: black;
+}
+
+.LoginButton:hover {
+  border: 3px solid rgb(44, 0, 106);
+  box-shadow: 0 0 10px rgb(44, 0, 106),0 0 20px rgb(44, 0, 106);
+}
+
+.UserInfo {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* opcional para centralizar horizontalmente se usar largura maior */
+  gap: 8px;
+  background: #f2f2f2;
+  padding: 8px 12px;
+  border-radius: 50% 25% 50% 25%;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.15);
+  z-index: 999;
+  width: 200px;
+  border: 3px solid white;
+  transition: border 0.2s linear;
+}
+
+.UserInfo:hover {
+  border: 3px solid rgb(44, 0, 106);
+  box-shadow: 0 0 10px rgb(44, 0, 106), 0 0 20px rgb(44, 0, 106);
+}
+
+.UserInfo img {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+}
+
+.UserInfo span {
+  font-weight: bold;
+  color: black;
+  line-height: 1.2;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  height: 36px; /* igual à altura da imagem */
+}
+
 @keyframes FadeInOpacity {
   0% {
     opacity: 0;
