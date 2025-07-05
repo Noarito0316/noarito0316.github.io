@@ -7,8 +7,8 @@ const UserInfo = () => {
   if (!user) return null;
 
   return (
-    <div className='UserInfo'>
-      <img src={user.picture} alt="Foto do usuário"/>
+    <div className="UserInfo">
+      <img src={user.picture} alt="Foto do usuário" width={40} />
       <span>{user.name}</span>
     </div>
   );
