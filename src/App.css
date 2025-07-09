@@ -4,6 +4,14 @@
   color: white;
 }
 
+button {
+  color: black;
+}
+
+select {
+  color: black;
+};
+
 a {
   color: white;
   transition: text-shadow 0.2s linear;
@@ -22,6 +30,11 @@ body {
   height: fit-content;
   background-image: linear-gradient(rgb(75, 1, 177), rgb(162, 115, 228));
   align-items: center; 
+}
+
+input {
+  color: black !important;
+  background-color: white !important;
 }
 
 @media (max-width: 900px) {
