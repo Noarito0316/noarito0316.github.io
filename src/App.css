@@ -67,7 +67,7 @@ a:hover {
   margin: 20px;
 }
 
-.post-container p {
+.post-container p, .post-container h1, .post-container h2, .post-container h3 {
   color: black;
 }
 

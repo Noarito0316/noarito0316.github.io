@@ -10,7 +10,10 @@ export default function PostView({ post }) {
   }, [])
 
   return (
-    <div className='post-container' dangerouslySetInnerHTML={{ __html: post.content }} />
+        <div className='post-container' style={{ border: '1px solid #ccc', padding: 16, marginBottom: 24 }}>
+        <h2>{post.title}</h2>
+        <div dangerouslySetInnerHTML={{ __html: post.content }} />
+        </div>
   )
 }
 
