@@ -12,7 +12,7 @@ const links = [
 
 function Nav() {
   return (
-    <nav>
+    <nav className='navegationcontainer'>
       {links.map((link, index) => (
         <Link to={link.to} key={index}>
           <div className="navfix">
