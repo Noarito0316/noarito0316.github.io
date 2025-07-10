@@ -101,7 +101,8 @@ a:hover {
   background-color: inherit;
 }
 
-.topbar a {
+.topbar a , .UserInfo, .LoginButton {
+  background-color: transparent;
   color: white;
   height: min-content;
   text-decoration: none;
@@ -109,37 +110,24 @@ a:hover {
   padding: 6px 12px;
   border-radius: 6px;
   transition: background 0.3s;
+  border: none;         /* Remove a borda */
+  outline: none;        /* Remove o contorno ao focar (ex: tab) */
+  box-shadow: none;     /* Remove sombras que imitam bordas */
+  background: none;     /* Opcional: remove a cor de fundo */
 }
 
-.topbar a:hover {
+.topbar a:hover , .UserInfo:hover, .LoginButton:hover {
   background: rgba(255, 255, 255, 0.3);
 }
 
-.topbar a.active {
+.topbar a.active , .UserInfo:active, .LoginButton:active {
   background: white;
   color: rgb(44, 0, 106);
 }
 
 
-/* BOTÃO DE LOGIN */
-.LoginButton {
-  position: relative;
-  left: 2px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 200px;
-  max-height: min-content;
-  border: 3px solid white;
-  border-radius: 15%;
-  transition: border 0.3s linear;
-  color: black;
-}
 
-.LoginButton:hover {
-  border: 3px solid rgb(44, 0, 106);
-  box-shadow: 0 0 10px rgb(44, 0, 106), 0 0 20px rgb(44, 0, 106);
-}
+
 
 /* INFO DO USUÁRIO */
 .UserInfo {
@@ -151,19 +139,8 @@ a:hover {
   align-items: center;
   justify-content: center;
   gap: 8px;
-  background: #f2f2f2;
   padding: 8px 12px;
   border-radius: 15%;
-  box-shadow: 0 0 6px rgba(0, 0, 0, 0.15);
-  z-index: 999;
-  width: 200px;
-  border: 3px solid white;
-  transition: border 0.3s linear;
-}
-
-.UserInfo:hover {
-  border: 3px solid rgb(44, 0, 106);
-  box-shadow: 0 0 10px rgb(44, 0, 106), 0 0 20px rgb(44, 0, 106);
 }
 
 .UserInfo img {
@@ -171,16 +148,6 @@ a:hover {
   height: 36px;
   border-radius: 50%;
   object-fit: cover;
-}
-
-.UserInfo span {
-  font-weight: bold;
-  color: black;
-  line-height: 1.2;
-  font-size: 14px;
-  display: flex;
-  align-items: center;
-  height: 36px;
 }
 
 /* NAVEGAÇÃO LATERAL */
