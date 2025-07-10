@@ -1,9 +1,13 @@
 import { Link, useLocation } from 'react-router-dom'
+import LoginButton from '../components/GoogleButton'
+import UserInfo from '../components/UserInfo'
+
 
 export default function TopBarLinks() {
   const location = useLocation()
 
   const links = [
+    { label: 'Home', path: '/' },
     { label: 'Promoções', path: '/cdltemplate/promocoes' },
     { label: 'Vagas', path: '/cdltemplate/vagas' },
     { label: 'Notícias', path: '/cdltemplate/noticias' },
@@ -13,6 +17,7 @@ export default function TopBarLinks() {
 
   return (
     <div className="topbar">
+        <LoginButton />
       {links.map(link => (
         <Link
           key={link.path}
@@ -21,7 +26,9 @@ export default function TopBarLinks() {
         >
           {link.label}
         </Link>
+        
       ))}
+        <UserInfo />
     </div>
   )
 }

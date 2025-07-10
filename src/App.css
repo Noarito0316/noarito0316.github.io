@@ -45,7 +45,9 @@ a:hover {
 }
 
 .fundo-padrao nav {
-  background-color: rgb(50, 160, 204);}
+  background-color: rgb(50, 160, 204);
+  display: none;
+}
 
 
 .post-container {
@@ -84,6 +86,7 @@ a:hover {
 
 .topbar {
   display: flex;
+  max-height: min-content;
   justify-content: center;
   gap: 16px;
   padding: 10px 20px;
@@ -95,6 +98,7 @@ a:hover {
 
 .topbar a {
   color: white;
+  height: min-content;
   text-decoration: none;
   font-weight: bold;
   padding: 6px 12px;
@@ -114,13 +118,14 @@ a:hover {
 
 /* BOTÃO DE LOGIN */
 .LoginButton {
-  position: fixed;
+  position: relative;
   top: 10px;
-  left: 100px;
+  left: 2px;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 200px;
+  max-height: min-content;
   border: 3px solid white;
   border-radius: 50% 10% 50% 10%;
   transition: border 0.2s linear;
@@ -134,7 +139,8 @@ a:hover {
 
 /* INFO DO USUÁRIO */
 .UserInfo {
-  position: fixed;
+  position:relative;
+  max-height: min-content;
   top: 10px;
   right: 10px;
   display: flex;

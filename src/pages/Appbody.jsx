@@ -5,8 +5,6 @@ import Personal from './Personal'
 import Projects from './Projects'
 import Categoria from './Category'
 import PostEditor from '../components/PostEditor'
-import UserInfo from '../components/UserInfo'
-import LoginButton from '../components/GoogleButton'
 import SessionLoader from './Login'
 import TopBarLinks from './TopBarLinks'
 
@@ -21,10 +19,8 @@ export default function AppContent() {
 
   return (
     <div className={usarLayoutColorido ? 'fundo-padrao' : 'fundo-roxo'}>
-      <UserInfo />
       <Nav />
       <TopBarLinks />
-      <LoginButton />
       <Routes>
         <Route element={<SessionLoader />} />
         <Route path="/" element={<Home />} />
@@ -33,7 +29,6 @@ export default function AppContent() {
         <Route path="/admin" element={<PostEditor />} />
         <Route path="/cdltemplate/:nome" element={<Categoria />} />
       </Routes>
-      <UserInfo />
     </div>
   )
 }
