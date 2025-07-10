@@ -8,6 +8,7 @@ import PostEditor from '../components/PostEditor'
 import UserInfo from '../components/UserInfo'
 import LoginButton from '../components/GoogleButton'
 import SessionLoader from './Login'
+import TopBarLinks from './TopBarLinks'
 
 export default function AppContent() {
     const location = useLocation()
@@ -22,6 +23,7 @@ export default function AppContent() {
     <div className={usarLayoutColorido ? 'fundo-padrao' : 'fundo-roxo'}>
       <UserInfo />
       <Nav />
+      <TopBarLinks />
       <LoginButton />
       <Routes>
         <Route element={<SessionLoader />} />
