@@ -6,8 +6,10 @@ const categorias = ['promocoes', 'vagas', 'noticias', 'sorteios']
 function ImageLibraryModal({ onSelect, onClose }) {
   const [images, setImages] = useState([])
   const [loading, setLoading] = useState(true)
+  const [uploading, setUploading] = useState(false)
 
   async function fetchImages() {
+    setLoading(true)
     const { data, error } = await supabase.storage.from('posts').list('', { limit: 100 })
     if (error) {
       console.error('Erro ao listar imagens:', error)
@@ -38,12 +40,36 @@ function ImageLibraryModal({ onSelect, onClose }) {
     }
   }
 
+  async function handleUpload(event) {
+    const file = event.target.files[0]
+    if (!file) return
+
+    const fileName = `${Date.now()}-${file.name}`
+    setUploading(true)
+
+    const { error } = await supabase.storage.from('posts').upload(fileName, file)
+
+    if (error) {
+      alert('Erro ao fazer upload: ' + error.message)
+    } else {
+      await fetchImages() // atualiza lista
+    }
+
+    setUploading(false)
+  }
+
   return (
     <div style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, background: '#0009', zIndex: 1000, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-      <div style={{ background: 'white', padding: 20, maxHeight: '80vh', overflowY: 'auto', borderRadius: 8 }}>
+      <div style={{ background: 'white', padding: 20, maxHeight: '80vh', overflowY: 'auto', borderRadius: 8, width: '90%', maxWidth: 600 }}>
         <h3>Biblioteca de Imagens</h3>
-        {loading ? <p>Carregando imagens...</p> : (
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(120px, 1fr))', gap: 12 }}>
+
+        <input type="file" accept="image/*" onChange={handleUpload} disabled={uploading} />
+        {uploading && <p>Enviando imagem...</p>}
+
+        {loading ? (
+          <p>Carregando imagens...</p>
+        ) : (
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(120px, 1fr))', gap: 12, marginTop: 16 }}>
             {images.map(img => (
               <div style={{ position: 'relative' }} key={img.name}>
                 <img
@@ -86,10 +112,11 @@ function ImageLibraryModal({ onSelect, onClose }) {
             ))}
           </div>
         )}
+
         <button onClick={onClose} style={{ marginTop: 16 }}>Fechar</button>
       </div>
     </div>
   )
 }
 
-export default ImageLibraryModal;
+export default ImageLibraryModal

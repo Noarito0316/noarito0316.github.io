@@ -1,16 +1,22 @@
+/* RESET BÁSICO */
 * {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
   color: white;
 }
 
-button {
-  color: black;
+body {
+  font-family: sans-serif;
 }
 
-select {
+/* ELEMENTOS GERAIS */
+button,
+select,
+input {
   color: black;
-};
+  background-color: white;
+}
 
 a {
   color: white;
@@ -19,26 +25,207 @@ a {
 
 a:hover {
   text-shadow: 0 0 5px rgb(44, 0, 106), 0 0 10px rgb(44, 0, 106);
-  transition: text-shadow 0.2s linear;
 }
 
-body {
+/* ESTILOS CONDICIONAIS POR ROTA */
+.fundo-roxo {
+  background: linear-gradient(to bottom, rgb(75, 1, 177), rgb(162, 115, 228));
+  color: white;
+  min-height: 100vh;
+  transition: background 0.3s ease;
+}
+
+.fundo-padrao {
   display: flex;
-  flex-flow: column wrap;
-  background-color: rgb(75, 1, 177);
+  flex-direction: column;
+  align-items: center; /* Centraliza horizontalmente */
+  background: linear-gradient(to bottom, rgb(50, 160, 204), rgb(255, 255, 255));
+  color: black;
+  min-height: 100vh;
+  transition: background 0.3s ease;
+}
+
+.fundo-padrao select option {
+  color: black;
+  background-color: rgb(50, 160, 204);
+}
+
+.fundo-padrao nav {
+  background-color: rgb(50, 160, 204);}
+
+
+.post-container {
+  color: black;
+  align-self: center;
+  flex-direction: column;
+  align-items: center;  /* Centraliza horizontalmente */
+  justify-content: center; /* Centraliza verticalmente se necessário */
+  padding: 20px;
+  background-color: white;
+  border-radius: 2%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+}
+
+.post-container p {
+  color: black;
+}
+
+/* BOTÃO DE LOGIN */
+.LoginButton {
+  position: fixed;
+  top: 10px;
+  left: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  border: 3px solid white;
+  border-radius: 50% 10% 50% 10%;
+  transition: border 0.2s linear;
+  color: black;
+}
+
+.LoginButton:hover {
+  border: 3px solid rgb(44, 0, 106);
+  box-shadow: 0 0 10px rgb(44, 0, 106), 0 0 20px rgb(44, 0, 106);
+}
+
+/* INFO DO USUÁRIO */
+.UserInfo {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: #f2f2f2;
+  padding: 8px 12px;
+  border-radius: 50% 25% 50% 25%;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.15);
+  z-index: 999;
+  width: 200px;
+  border: 3px solid white;
+  transition: border 0.2s linear;
+}
+
+.UserInfo:hover {
+  border: 3px solid rgb(44, 0, 106);
+  box-shadow: 0 0 10px rgb(44, 0, 106), 0 0 20px rgb(44, 0, 106);
+}
+
+.UserInfo img {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.UserInfo span {
+  font-weight: bold;
+  color: black;
+  line-height: 1.2;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  height: 36px;
+}
+
+/* NAVEGAÇÃO LATERAL */
+nav {
+  padding: 10px;
+  position: fixed;
+  left: 0;
+  z-index: 50;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
   min-height: 100vh;
   height: fit-content;
-  background-image: linear-gradient(rgb(75, 1, 177), rgb(162, 115, 228));
-  align-items: center; 
+  width: fit-content;
+  background-color: rgb(58, 9, 126);
 }
 
-input {
-  color: black !important;
-  background-color: white !important;
+nav a:hover {
+  color: white;
 }
 
-@media (max-width: 900px) {
-  .login-button {
+/* IMAGEM DO LEO */
+#leoimg {
+  width: 200px;
+  border: 3px solid white;
+  border-radius: 50% 10%;
+  transition: border 0.2s linear;
+}
+
+#leoimg:hover {
+  border: 3px solid rgb(44, 0, 106);
+  box-shadow: 0 0 10px rgb(44, 0, 106), 0 0 20px rgb(44, 0, 106);
+}
+
+/* ÁREA PRINCIPAL DE CONTEÚDO */
+.bodycontainer {
+  animation: 1.5s linear 0s 1 FadeInOpacity;
+  align-items: center;
+  display: flex;
+  width: fit-content;
+  flex-direction: column;
+  margin-left: 80px;
+  max-width: 80%;
+  text-align: center;
+}
+
+.bodycontainer p {
+  width: 80%;
+}
+
+/* VÍDEO */
+.video {
+  max-width: 80%;
+}
+
+/* ANIMAÇÃO */
+@keyframes FadeInOpacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* INFO POPUP */
+.infoPopUp {
+  background-color: rgb(58, 9, 126);
+  display: flex;
+  opacity: 0;
+  position: absolute;
+  transform: translateX(-5px);
+  transition: transform 1s;
+}
+
+div:hover > .infoPopUp {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  opacity: 1;
+  transform: translateX(40px);
+  width: 150px;
+  z-index: -2;
+}
+
+/* LAYOUT FIXO */
+.navfix {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+
+/* RESPONSIVO */
+@media screen and (max-width: 900px) {
+  .LoginButton {
     position: relative;
     top: 0;
     left: 0;
@@ -63,167 +250,13 @@ input {
   }
 }
 
-
-.LoginButton {
-  position: fixed;
-  top: 10px;
-  left: 100px;
-  display: flex;
-  align-items: center;
-  justify-content: center; /* opcional para centralizar horizontalmente se usar largura maior */
-  display: flex;
-  width: 200px;
-  border: 3px solid white;
-  border-radius: 50% 10% 50% 10%;
-  transition: border 0.2s linear;
-}
-
-*.LoginButton {
-  color: black;
-}
-
-.LoginButton:hover {
-  border: 3px solid rgb(44, 0, 106);
-  box-shadow: 0 0 10px rgb(44, 0, 106),0 0 20px rgb(44, 0, 106);
-}
-
-.UserInfo {
-  position: fixed;
-  top: 10px;
-  right: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center; /* opcional para centralizar horizontalmente se usar largura maior */
-  gap: 8px;
-  background: #f2f2f2;
-  padding: 8px 12px;
-  border-radius: 50% 25% 50% 25%;
-  box-shadow: 0 0 6px rgba(0, 0, 0, 0.15);
-  z-index: 999;
-  width: 200px;
-  border: 3px solid white;
-  transition: border 0.2s linear;
-}
-
-.UserInfo:hover {
-  border: 3px solid rgb(44, 0, 106);
-  box-shadow: 0 0 10px rgb(44, 0, 106), 0 0 20px rgb(44, 0, 106);
-}
-
-.UserInfo img {
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  object-fit: cover;
-  display: block;
-}
-
-.UserInfo span {
-  font-weight: bold;
-  color: black;
-  line-height: 1.2;
-  font-size: 14px;
-  display: flex;
-  align-items: center;
-  height: 36px; /* igual à altura da imagem */
-}
-
-@keyframes FadeInOpacity {
-  0% {
-    opacity: 0;
-  }
-  
-  100% {
-    opacity: 1;
-  }
-}
-
-nav a:hover {
-  color: white;
-}
-
-.infoPopUp {
-  background-color: rgb(58, 9, 126);
-  display: flex;
-  opacity: 0;
-  position: absolute;
-  transform: translateX(-5px);
-  transition: transform 1s;
-}
-
-
-div:hover > .infoPopUp {
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100px;
-  opacity: 1;
-  transform: translateX(40px);
-  width: 150px;
-  z-index: -2;
-}
-
-
-.navfix {
-  display: flex;
-  flex-flow: row wrap;
-  align-items: center;
-}
-
-.bodycontainer {
-  animation: 1.5s linear 0s 1 FadeInOpacity;
-  align-items: center;
-  display: flex;
-  width: fit-content;
-  flex-direction: column ;
-  margin-left:80px;
-  max-width: 80%;
-  text-align: center;
-}
-
-.bodycontainer p{
-  width: 80%;
-  }
-
-nav {
-  padding: 10px;
-  position: fixed;
-  left: 0;
-  z-index: 50;
-  display: flex;
-  justify-content: space-around;
-  flex-direction: column;
-  min-height: 100vh;
-  height: fit-content;
-  width: fit-content;
-  background-color: rgb(58, 9, 126);
-}
-
-#leoimg {
-  width: 200px;
-  border: 3px solid white;
-  border-radius: 50% 10%;
-  transition: border 0.2s linear;
-}
-
-#leoimg:hover {
-  border: 3px solid rgb(44, 0, 106);
-  box-shadow: 0 0 10px rgb(44, 0, 106),0 0 20px rgb(44, 0, 106);
-  transition: box-shadow 0,2s linear;
-}
-
-.video {
-  max-width: 80%;
-}
-
 @media screen and (max-width: 550px) {
   body {
-  background-color: rgb(103, 10, 126);
-}
+    background-color: rgb(103, 10, 126);
+  }
 
-#leoimg {
-  width: 80%;
-  max-width: 200px;
-}
-
+  #leoimg {
+    width: 80%;
+    max-width: 200px;
+  }
 }

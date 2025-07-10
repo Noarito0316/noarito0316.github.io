@@ -8,6 +8,12 @@ import { UserProvider } from './contexts/UserContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
+const script = document.createElement('script');
+script.src = 'https://www.instagram.com/embed.js';
+script.async = true;
+document.body.appendChild(script);
+
+
 root.render(
   <React.StrictMode>
     <GoogleOAuthProvider clientId="268805329442-6t61hsebn0oajep7s43qph0r4q00ho9n.apps.googleusercontent.com">
