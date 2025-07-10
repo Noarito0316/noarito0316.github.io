@@ -221,10 +221,7 @@ nav a:hover {
   justify-content: center;  
   align-items: center;
   display: flex;
-  width: fit-content;
   flex-direction: column;
-  margin-left: 80px;
-  max-width: 80%;
   text-align: center;
 }
 
